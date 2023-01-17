@@ -24,3 +24,8 @@ blocks:
             - cache restore
             - npm run build
             - artifact push workflow dist/
+promotions:
+  - name: Deploy to Vercel
+    pipeline_file: pipeline_2.yml
+    auto_promote:
+      when: branch = 'main' AND result = 'passed'
