@@ -25,7 +25,7 @@ blocks:
             - npm run build
             - artifact push workflow dist/
 promotions:
-  - name: Deploy to Vercel
+  - name: Deploy to Netlify
     pipeline_file: pipeline_2.yml
     auto_promote:
       when: branch = 'main' AND result = 'passed'

@@ -8,8 +8,11 @@ blocks:
   - name: Deploy
     task:
       jobs:
-        - name: Vercel Deploy
+        - name: Netlify Deploy
           commands:
             - checkout
-            - npm install -g vercel
-            - vercel deploy --prod
+            - artifact pull workflow dist
+            - npm install -g netlify-cli
+            - netlify deploy --dir=dist --prod --auth $NETLIFY_TOKEN --site $NETLIFY_SITE
+      secrets:
+        - name: netlify-tomfern
