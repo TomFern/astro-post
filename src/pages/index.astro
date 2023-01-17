@@ -1,7 +1,10 @@
 ---
-import SiteLayout from "../layouts/SiteLayout.astro";
+// import Meta from "../components/Meta.astro";
+import MyButton from "../components/Button.jsx";
 ---
 
-<SiteLayout>
-	<p>This content is rendered in the slot</p>
-</SiteLayout>
+<html lang="en">
+	<body>
+		<MyButton client:load />
+	</body>
+</html>

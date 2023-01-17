@@ -2,12 +2,16 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Meta from "../components/Meta.astro";
+import MyButton from "../components/Button.jsx";
+// import Greeting  from "../components/Button2.jsx";
+// <Greeting messages={["Hi", "Hello", "Howdy", "Hey there"]} />
 ---
 
 <html lang="en">
 	<head>
 		<Meta />
-        <Header client:load </Header>title = "Welcome my Astro Blog!" />
+        <Header title = "Welcome my Astro Blog! with button" />
+		<MyButton client:load />
 	</head>
 	<body>
 		<slot />
