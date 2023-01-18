@@ -23,4 +23,4 @@ blocks:
             - sem-version node 19.4
             - cache restore
             - npm run build
-            - artifact store workflow dist
+            - artifact push workflow dist/
